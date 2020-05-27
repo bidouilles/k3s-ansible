@@ -44,6 +44,14 @@ Start provisioning of the cluster using the following command:
 ansible-playbook site.yml -i inventory/hosts.ini
 ```
 
+## Shutdown or reboot instances
+
+To reboot all instances just
+
+```bash
+ansible all -i inventory/hosts.ini -a "reboot -n" -b
+```
+
 ## Kubeconfig
 
 To get access to your **Kubernetes** cluster just
